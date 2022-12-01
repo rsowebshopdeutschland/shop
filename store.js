@@ -26,9 +26,18 @@ function ready() {
     }
 
     // redirect when button is clicked
-    document.getElementById('mc-embedded-subscribe').addEventListener('click', validateEmail);
+    var orderbut =  document.getElementById('mc-embedded-subscribe')
+    if (typeof(element) != 'undefined' && element != null)
+    {
+        orderbut.addEventListener('click', validateEmail);
+    }
 
-    document.getElementById('mc-embedded-subscribe2').addEventListener('click', validateEmail2);
+    
+    var orderbut =  document.getElementById('mc-embedded-subscribe2')
+    if (typeof(element) != 'undefined' && element != null)
+    {
+        orderbut.addEventListener('click', validateEmail2);
+    }
     
 }
 
@@ -74,8 +83,8 @@ function validateEmail() {
        document.getElementById('entry.1293249477').focus() ;
        return false;
     }
-    var Name = document.getElementById('entry.1788447504').value;
-    if (String(Name) < 1 || String(Phone) < 1 || String(Address) < 1) {
+    var Message = document.getElementById('entry.1788447504').value;
+    if (String(Message) < 1) {
         alert("Missing or incorrect input")
         document.getElementById('entry.1293249477').focus() ;
         return false;
