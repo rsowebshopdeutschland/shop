@@ -26,6 +26,7 @@ function ready() {
     }
 
     // redirect when button is clicked
+    
     var orderbut =  document.getElementById('mc-embedded-subscribe')
     if (typeof(element) != 'undefined' && element != null)
     {
@@ -33,11 +34,12 @@ function ready() {
     }
 
     
-    var orderbut =  document.getElementById('mc-embedded-subscribe2')
+    var orderbut =  document.getElementById('mc_subscribe2')
     if (typeof(element) != 'undefined' && element != null)
     {
-        orderbut.addEventListener('click', validateEmail2);
+        orderbut.addEventListener('click', valem2);
     }
+    
     
 }
 
@@ -72,8 +74,10 @@ function validateEmail() {
      location.href = "thankyou.html";
  }
 
+
+ 
 //  Contact page validation
- function validateEmail2() {
+ function valem2() {
     var emailID = document.getElementById('entry.1293249477').value;
     atpos = emailID.indexOf("@");
     dotpos = emailID.lastIndexOf(".");
@@ -86,16 +90,16 @@ function validateEmail() {
     var Message = document.getElementById('entry.1788447504').value;
     if (String(Message) < 1) {
         alert("Missing or incorrect input")
-        document.getElementById('entry.1293249477').focus() ;
+        document.getElementById('entry.1226908809').focus() ;
         return false;
      }
     // return(true);
-    return(true , setTimeout(redirect2,1000) );
+    return(true , setTimeout(redir2, 1000) );
     
  }
 
 
- function redirect2()
+ function redir2()
  {
      location.href = "thankyoumessage.html";
  }
@@ -207,6 +211,9 @@ function updateCartTotal2() {
     // 1133rat-6x value
     document.getElementById('entry.39888874').value = String(document.getElementsByClassName('product-quantity-input')[15].value)
     
+    // websitename
+    document.getElementById('entry.1101495060').value = String('Deutschland')
+
     // Total value
     document.getElementById('entry.431486396').value = String(total2)
     
